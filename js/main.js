@@ -34,6 +34,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     let winner = 0;
+    playerSelection = playerSelection.toUpperCase();
     //Rock beats Scissors
     if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') {
         winner++;
@@ -49,3 +50,11 @@ function playRound(playerSelection, computerSelection) {
 
     return winner;
 }
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) =>{
+    button.addEventListener('click',(e) => {
+        let round = playRound(e.target.id,computerPlay());
+        console.log(round);
+    });
+});
