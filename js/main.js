@@ -54,7 +54,12 @@ function playRound(playerSelection, computerSelection) {
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) =>{
     button.addEventListener('click',(e) => {
-        let round = playRound(e.target.id,computerPlay());
-        console.log(round);
+        let roundResult = playRound(e.target.id,computerPlay());
+        showResults(roundResult);
     });
 });
+
+function showResults(result){
+    const resulltBoard = document.querySelector('#resultBoard');
+    resulltBoard.textContent = result;
+}
