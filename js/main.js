@@ -1,5 +1,5 @@
 const gameOptions = ['ROCK', 'PAPER', 'SCISSORS'];
-
+/* 
 function game() {
     let playerScore = 0, computerScore = 0, playerWin;
 
@@ -24,7 +24,7 @@ function game() {
     }
     console.log(`Final Score: \n Player:${playerScore} \n Computer: ${computerScore}`);
 }
-
+ */
 
 function computerPlay() {
 
